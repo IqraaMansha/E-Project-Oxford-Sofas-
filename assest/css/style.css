@@ -792,42 +792,6 @@ details ul li:hover {
     cursor: pointer;
 }
 
-/* .hes {
-    display: none;
-    position: relative;
-    width: 150px;
-}
-
-.hes .drop {
-    position: absolute;
-    left: 20px;
-    right: 0;
-    width: 100%;
-    bottom: -50%;
-    /* top: -100%; */
-   /* padding: 10px 20px;
-    background: var(--main-color);
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-in-out;
-    color: var(--text-color);
-}
-
-.drop.sow {
-    display: none;
-}
-
-.drop h3 {
-    display: block;
-    margin-bottom: 10px;
-    width: 100%;
-    border-bottom: 1px solid transparent;
-}
-
-.drop h3:hover {
-    border-bottom: 1px solid white;
-} */
-
 .headings h3.now {
     border-bottom: 1px solid var(--main-color);
 }
@@ -1269,7 +1233,6 @@ details ul li:hover {
     }
 
 }
-
 
 /* footerrr */
 footer {

@@ -26,8 +26,6 @@ window.onscroll = () => {
     })
 }
 
-
-
 // REVIEW SECTION ANIMATIONNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
 const dispValues = document.querySelectorAll('.num');
 let interval = 8000;

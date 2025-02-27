@@ -17,7 +17,6 @@ function checkname() {
     }
     nameField.classList.remove("invalid");
 }
-
 // Username Validation
 function checkusername() {
     const usernamePattern = /^(?=.*[a-z]{2,3}$)/;

@@ -219,7 +219,6 @@ form .links a:nth-child(2) {
         height: 150vh;
     }
 }
-
 /* Media Query for Phones */
 @media only screen and (max-width: 500px) {
 

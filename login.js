@@ -17,7 +17,6 @@ function checkEmail() {
         emailError.style.display = 'none';
     }
 }
-
 // Password Validation
 function createPass() {
     const passPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;

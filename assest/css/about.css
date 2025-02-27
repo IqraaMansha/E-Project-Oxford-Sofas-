@@ -91,7 +91,7 @@ html {
 
 body {
     background: #161616;
-    background: url('/Imagess/Diwansofas/12.jpg') no-repeat;
+    background: url('../../Imagess/Diwansofas/12.jpg') no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -316,12 +316,6 @@ details ul li:hover {
         color: white;
     }
 }
-
-
-
-
-
-
 /* FOOOOOOOOOOOOOOOOOOOOOOOTERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR */
 
 footer {
@@ -477,7 +471,7 @@ footer .footerFlex {
 
 .about .aboutbg {
 
-    background: url('/Imagess/BOX.jpg') no-repeat;
+    background: url('../../Imagess/BOX.jpg') no-repeat;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

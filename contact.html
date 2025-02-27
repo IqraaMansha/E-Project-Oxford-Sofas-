@@ -17,7 +17,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="assest/css/contact.css">
-    <link rel="website icon" type="png" href="Imagess/1.png">
+    <link rel="website icon" type="png" href="./Imagess/1.png">
 </head>
 
 <body>
@@ -121,9 +121,6 @@
                                 });
                             }
                         </script>
-
-
-
                         <li>
                             <i class='bx bx-heart'></i>
                             <a href="wishlist.html" class="wish" style="text-decoration: none; ">
@@ -253,13 +250,13 @@
                         <div class="social">
                             <h3>Stay Connected</h3>
                             <div>
-                                <a href="">
+                                <a href="www.facebook.com">
                                     <i class='bx bxl-facebook'></i>
                                 </a>
                                 <a href="https://github.com/IqraaMansha">
                                     <i class='bx bxl-github'></i>
                                 </a>
-                                <a href="">
+                                <a href="www.instagram.com">
                                     <i class='bx bxl-instagram'></i>
                                 </a>
                                 <a href="https://www.linkedin.com/in/iqra-mansha-im/">
@@ -286,22 +283,23 @@
                             </div>
                             <div class="inputBox">
                                 <label for="message"></label>
-                                <textarea name="message" id="message" placeholder="Write your message..." required></textarea>
+                                <textarea name="message" id="message" placeholder="Write your message..."
+                                    required></textarea>
                             </div>
-                    
+
                             <button type="submit">SEND</button>
                         </form>
-                    
+
                         <script>
-                            document.getElementById("contactForm").addEventListener("submit", function(event) {
+                            document.getElementById("contactForm").addEventListener("submit", function (event) {
                                 event.preventDefault();  // Prevent form submission
-                                
+
                                 // Check if all fields are filled
                                 const name = document.getElementById("name").value;
                                 const email = document.getElementById("email").value;
                                 const phone = document.getElementById("phone").value;
                                 const message = document.getElementById("message").value;
-                    
+
                                 // If all fields are filled, show the alert and refresh the page
                                 if (name && email && phone && message) {
                                     alert("Your message has been sent!");
@@ -333,7 +331,7 @@
                 </form>
             </div>
             <div class="newsImg">
-                <img src="/Imagess/Diwansofas/18.png" alt="">
+                <img src="./Imagess/Diwansofas/18.png" alt="">
             </div>
         </div>
     </section>
@@ -382,8 +380,8 @@
         <div class="copyrightSec">
             <p>Copyright&copy;2025 E-project Oxford Sofas. All Rights Reserved.</p>
             <div class="socialMedia">
-                <a href="#"><i class='bx bxl-facebook'></i></a>
-                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="www.facebook.com"><i class='bx bxl-facebook'></i></a>
+                <a href="www.instagram.com"><i class='bx bxl-instagram'></i></a>
                 <a href="https://github.com/Zehra796"><i class='bx bxl-github'></i></a>
                 <a href="https://www.linkedin.com/in/iqra-mansha-im/"><i class='bx bxl-linkedin'></i></a>
             </div>
@@ -412,7 +410,7 @@
 
         function initMap(userLat = null, userLon = null) {
             // Office location (replace with actual coordinates)
-            const officeLocation = { lat: 51.754816, lng:  -1.256999 };
+            const officeLocation = { lat: 51.754816, lng: -1.256999 };
 
             // If user location is available, center the map there, otherwise use office location
             const centerLocation = userLat && userLon ? { lat: userLat, lng: userLon } : officeLocation;
@@ -458,7 +456,7 @@
 
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
-    <script src="assest/js/script.js"></script>
+    <script src="./assest/js/script.js"></script>
 </body>
 
 </html>

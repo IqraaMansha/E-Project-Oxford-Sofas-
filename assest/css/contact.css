@@ -94,7 +94,7 @@ html {
 
 body {
     background: #161616;
-    background: url('/images/bg2.jpeg') no-repeat;
+    background: url('../../images/bg2.jpeg') no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -480,7 +480,7 @@ footer .footerFlex {
 }
 
 .contact .contactbg {
-    background: url('/Imagess/Products/10.jpg') no-repeat;
+    background: url('../../Imagess/Products/10.jpg') no-repeat;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

@@ -27,7 +27,6 @@ window.onscroll = () => {
 }
 
 
-
 let cart = [];
 let itemPrices = {
     'living space with the Azzurro 1': 18.00,
