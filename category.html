@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oxford Sofas - All Categories</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="website icon" type="png" href="Imagess/1.png">
+    <link rel="stylesheet" href="category.css">
+    <link rel="website icon" type="png" href="Imagess/1.png">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <script>
+
+        window.addEventListener('scroll', function () {
+            var scroll = this.document.querySelector('.scrollTop');
+            scroll.classList.toggle("active", window.scrollY > 500)
+        })
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            })
+        }
+
+    </script>
+    <div class="scrollTop" onclick="scrollToTop();"></div>
+    <div class="scrollTop fixed bottom-10 right-10 w-12 h-12 bg-green-600 rounded-full flex items-center justify-center shadow-lg cursor-pointer hidden" onclick="scrollToTop();">
+        <img src="./Imagess/arrow-up-solid.svg" alt="Scroll to Top" class="w-6 h-6">
+    </div>
+
+    <div class="flex flex-col md:flex-row">
+        <!-- Mobile Toggle Button -->
+        <button id="menu-btn" class="md:hidden p-4 bg-gray-300 text-gray-800 main-content">
+            ☰ Categories
+        </button>
+        <header class="header">
+            <a href="index.html" class="logo">
+                <span>O</span>
+                Oxford Sofas
+                <span>.</span>
+            </a>
+            <div class="hide">
+                <i class="bx bx-menu" id="menu-icon"></i>
+                <details>
+                    <summary>
+                        <i class="iv fa-solid fa-ellipsis-vertical"></i>
+                    </summary>
+                    <ul>
+                        <div class="search-box">
+                            <button class="btn-search" id="searchButton">
+                                <i class="fas fa-search" style="color: rgb(116, 173, 114); font-size: 13px;"></i>
+                            </button>
+                            <input type="text" class="input-search" placeholder="Type to Search..." id="searchInput">
+                        </div>
+                        <li>
+                            <i class='bx bx-heart'></i>
+                            <a href="wishlist.html" class="wish" style="text-decoration: none; ">
+                                Wishlist
+                            </a>
+                        </li>
+                        <li>
+                            <i class='bx bxs-user'></i>
+                            <a href="login.html" class="wish" style="text-decoration: none; ">
+                                Profile
+                            </a>
+                        </li>
+                    </ul>
+                </details>
+            </div>
+            <nav class="navbar">
+                <a href="index.html" class="active">Home</a>
+                <a href="product.html">Products</a>
+                <a href="category.html">Categories</a>
+                <a href="about.html">About Us</a>
+                <a href="./index.html#faq">FAQ</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="icons">
+                <div class="search-box">
+                    <button class="btn-search" id="searchButton">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <input type="text" class="input-search" placeholder="Type to Search..." id="searchInput">
+                </div>
+                <a href="wishlist.html">
+                    <i class='bx bx-heart'></i>
+                </a>
+                <a href="login.html">
+                    <i class='bx bxs-user'></i>
+                </a>
+            </div>
+        </header>
+
+       
+        <!-- Sidebar Navigation -->
+        <nav  id="sidebar" class=" main-content w-64 min-h-screen bg-gray-300 py-10 px-4 absolute md:relative left-0 transform -translate-x-full md:translate-x-0 transition-transform duration-300">
+            <h2 class="text-xl font-bold mb-6 text-gray-800 heading">Sofa Categories</h2>
+            <ul class="space-y-4">
+                <li><button data-nav="all" class="w-full text-left py-2 px-4 hover:bg-green-600 hover:text-white rounded">All Sofas</button></li>
+                <li><button data-nav="classic" class="w-full text-left py-2 px-4 hover:bg-green-600 hover:text-white rounded">Camelback Sofas</button></li>
+                <li><button data-nav="futon" class="w-full text-left py-2 px-4 hover:bg-green-600 hover:text-white rounded">Futon Sofas</button></li>
+                <li><button data-nav="modern" class="w-full text-left py-2 px-4 hover:bg-green-600 hover:text-white rounded">Leather Sofas</button></li>
+                <li><button data-nav="mid century couch" class="w-full text-left py-2 px-4 hover:bg-green-600 hover:text-white rounded">Mid-Century Couch</button></li>
+                <li><button data-nav="Chesterfield" class="w-full text-left py-2 px-4 hover:bg-green-600 hover:text-white rounded">Chesterfield Sofas</button></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="flex-1 px-8 py-8 main-content">
+            <h2 class="text-2xl font-bold mb-6">Explore Oxford Sofas</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Classic Sofa -->
+                <div data-category="classic"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="Imagess/camelbacksofa/IMG_1210.jpeg" alt="Classic Oxford Sofa"
+                        class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Camelback Sofa</h3>
+                        <p class="text-gray-500 mt-2">80,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc1.pdf" download> Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!-- Another classic sofa -->
+                <div data-category="classic"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="Imagess/camelbacksofa/IMG_1209.jpeg" alt="Classic Oxford Sofa"
+                        class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Camelback Sofa</h3>
+                        <p class="text-gray-500 mt-2">90,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc2.pdf" download> Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!-- Another classic sofa -->
+                <div data-category="classic"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="Imagess/camelbacksofa/IMG_1208.jpeg" alt="Classic Oxford Sofa" class="w-full h-90 pt-90 ">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Camelback Sofa</h3>
+                        <p class="text-gray-500 mt-2">200,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc3.pdf" download> Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!-- Another classic sofa -->
+                <div data-category="classic"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="Imagess/camelbacksofa/IMG_1207.jpeg" alt="Classic Oxford Sofa"
+                        class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Camelback Sofa</h3>
+                        <p class="text-gray-500 mt-2">100,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc4.pdf" download> Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!-- Another classic sofa -->
+                <div data-category="classic"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="Imagess/camelbacksofa/IMG_1206.jpeg" alt="Classic Oxford Sofa"
+                        class="w-full h-49 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Camelback Sofa</h3>
+                        <p class="text-gray-500 mt-2">250,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc5.pdf" download> Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!-- Futon Sofa -->
+                <div data-category="futon"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="Imagess/futonsofa/WhatsApp Image 2025-01-10 at 9.58.27 PM (7).jpeg" alt="Futon Sofa"
+                        class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Futon Sofa</h3>
+                        <p class="text-gray-500 mt-2">80,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc1 (1).pdf" download> Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!--Another Futon Sofa -->
+                <div data-category="futon"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="Imagess/futonsofa/WhatsApp Image 2025-01-10 at 9.58.27 PM (11).jpeg" alt="Futon Sofa"
+                        class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Futon Sofa</h3>
+                        <p class="text-gray-500 mt-2">50,000(PKR)</p>
+                        <button class="mt4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc2 (1).pdf" download> Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!--Another Futon Sofa -->
+                <div data-category="futon"
+                    class="bg-gray-300 rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="Imagess/futonsofa/WhatsApp Image 2025-01-26 at 12.05.48 AM (1).jpeg" alt="Futon Sofa"
+                        class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Futon Sofa</h3>
+                        <p class="text-gray-500 mt-2">100,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc8 (1).pdf" download> Download Details</a>
+
+                        </button>
+                    </div>
+                </div>
+                <!--Another Futon Sofa -->
+                <div data-category="futon"
+                    class="bg-gray-300 rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="Imagess/futonsofa/WhatsApp Image 2025-01-26 at 12.05.48 AM (3).jpeg" alt="Futon Sofa"
+                        class="w-full h-48 obect-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Futon Sofa</h3>
+                        <p class="text-gray-500 mt-2">90,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc6 (1).pdf" download> Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!--Another Futon Sofa -->
+                <div data-category="futon"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="Imagess/futonsofa/WhatsApp Image 2025-01-26 at 12.05.48 AM (4).jpeg" alt="Futon Sofa"
+                        class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Futon Sofa</h3>
+                        <p class="text-gray-500 mt-2">40,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc7 (1).pdf" download> Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!-- Modern Sofa -->
+                <div data-category="modern"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="Imagess/Leathersofa/IMG_1229.jpeg" alt="Modern Sofa" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Leather Sofa</h3>
+                        <p class="text-gray-500 mt-2">60,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc11.pdf" download> Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!-- Another  Modern Sofa -->
+                <div data-category="modern"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="Imagess/Leathersofa/IMG_1230.jpeg" alt="Modern Sofa" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Leather Sofa</h3>
+                        <p class="text-gray-500 mt-2">150,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc12.pdf" download> Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!-- Another  Modern Sofa -->
+                <div data-category="modern"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="Imagess/Leathersofa/IMG_1231.jpeg" alt="Modern Sofa" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Leather Sofa</h3>
+                        <p class="text-gray-500 mt-2">70,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc13.pdf" download> Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!-- Another  Modern Sofa -->
+                <div data-category="modern"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="Imagess/Leathersofa/IMG_1232.jpeg" alt="Modern Sofa" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Leather Sofa</h3>
+                        <p class="text-gray-500 mt-2">120,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc15.pdf" download> Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!-- Another  Modern Sofa -->
+                <div data-category="modern"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="Imagess/Leathersofa/IMG_1233.jpeg" alt="Modern Sofa" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Leather Sofa</h3>
+                        <p class="text-gray-500 mt-2">80,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc14.pdf" download> Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!-- mid century couch -->
+                <div data-category="mid century couch"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src='Imagess/Midcenturycouch/IMG_1211.jpeg' alt="Modern Sofa" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Mid-Century Couch</h3>
+                        <p class="text-gray-500 mt-2">130,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc6.pdf" download>Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!-- another mid-century couch -->
+                <div data-category="mid century couch"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src='Imagess/Midcenturycouch/IMG_1212.jpeg' alt="Modern Sofa" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Mid-Century Couch</h3>
+                        <p class="text-gray-500 mt-2">150,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc7.pdf" download>Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!-- another mid-century couch -->
+                <div data-category="mid century couch"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src='Imagess/Midcenturycouch/IMG_1213.jpeg' alt="Modern Sofa" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Mid-Century Couch</h3>
+                        <p class="text-gray-500 mt-2">70,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc9.pdf" download>Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!-- another mid-century couch -->
+                <div data-category="mid century couch"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src='Imagess/Midcenturycouch/IMG_1214.jpeg' alt="Modern Sofa" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Mid-Century Couch</h3>
+                        <p class="text-gray-500 mt-2">140,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc8.pdf" download>Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!-- another mid-century couch -->
+                <div data-category="mid century couch"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src='Imagess/Midcenturycouch/IMG_1215.jpeg' alt="Modern Sofa" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Mid-Century Couch</h3>
+                        <p class="text-gray-500 mt-2">90,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc10.pdf" download>Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!-- chesterfield sofa -->
+                <div data-category="Chesterfield"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src='Imagess/chesterfieldsofa/IMG_1224.jpeg' alt="Modern Sofa"
+                        class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Chesterfield Sofas</h3>
+                        <p class="text-gray-500 mt-2">60,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc16.pdf" download>Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!--Another chesterfield sofa -->
+                <div data-category="Chesterfield"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src='Imagess/chesterfieldsofa/IMG_1225.jpeg' alt="Modern Sofa"
+                        class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Chesterfield Sofas</h3>
+                        <p class="text-gray-500 mt-2">100,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc17.pdf" download>Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!--Another chesterfield sofa -->
+                <div data-category="Chesterfield"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src='Imagess/chesterfieldsofa/IMG_1226.jpeg' alt="Modern Sofa"
+                        class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Chesterfield Sofas</h3>
+                        <p class="text-gray-500 mt-2">80,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc18.pdf" download>Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!--Another chesterfield sofa -->
+                <div data-category="Chesterfield"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src='Imagess/chesterfieldsofa/IMG_1227.jpeg' alt="Modern Sofa"
+                        class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Chesterfield Sofas</h3>
+                        <p class="text-gray-500 mt-2">70,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc19.pdf" download>Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!--Another chesterfield sofa -->
+                <div data-category="Chesterfield"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src='Imagess/chesterfieldsofa/IMG_1228.jpeg' alt="Modern Sofa"
+                        class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Chesterfield Sofas</h3>
+                        <p class="text-gray-500 mt-2">140,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc20.pdf" download>Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!-- Armless  sofa -->
+                <div data-category="Armlesssofa"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src='Imagess/Armlesssofa/IMG_1216 (1).jpeg' alt="Modern Sofa" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Armless Sofa</h3>
+                        <p class="text-gray-500 mt-2">60,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc21.pdf" download>Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!-- Armless  sofa -->
+                <div data-category="Armlesssofa"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src='Imagess/Armlesssofa/IMG_1218 (1).jpeg' alt="Modern Sofa" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Armless Sofa</h3>
+                        <p class="text-gray-500 mt-2">70,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc22.pdf" download>Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!--Another Armlesssofa -->
+                <div data-category="Armlesssofa"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src='Imagess/Armlesssofa/IMG_1219 (1).jpeg' alt="Modern Sofa" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Armless Sofa</h3>
+                        <p class="text-gray-500 mt-2">120,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc23.pdf" download>Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!--Another Armlesssofa -->
+                <div data-category="Armlesssofa"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src='Imagess/Armlesssofa/IMG_1220.jpeg' alt="Modern Sofa" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Armless Sofa</h3>
+                        <p class="text-gray-500 mt-2">80,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc24.pdf" download>Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!--Another Armlesssofa -->
+                <div data-category="Armlesssofa"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src='Imagess/Armlesssofa/WhatsApp Image 2025-01-26 at 12.02.12 AM.jpeg' alt="Modern Sofa"
+                        class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Armless Sofa</h3>
+                        <p class="text-gray-500 mt-2">100,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc3 (1).pdf" download>Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!-- Contemporary sofa -->
+                <div data-category="Contemporary"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src='Imagess/Contemporary sofa/WhatsApp Image 2025-01-26 at 12.07.47 AM (3).jpeg'
+                        alt="Modern Sofa" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Contemporary Sofa</h3>
+                        <p class="text-gray-500 mt-2">90,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc12 (1).pdf" download>Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!-- Another Contemporary sofa -->
+                <div data-category="Contemporary"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src='Imagess/Contemporary sofa/WhatsApp Image 2025-01-26 at 12.07.47 AM (2).jpeg'
+                        alt="Modern Sofa" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Contemporary Sofa</h3>
+                        <p class="text-gray-500 mt-2">40,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc13 (1).pdf" download>Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!-- Another Contemporary sofa -->
+                <div data-category="Contemporary"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src='Imagess/Contemporary sofa/WhatsApp Image 2025-01-26 at 12.07.47 AM (1).jpeg'
+                        alt="Modern Sofa" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Contemporary Sofa</h3>
+                        <p class="text-gray-500 mt-2">80,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc10 (1).pdf" download>Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!-- Another Contemporary sofa -->
+                <div data-category="Contemporary"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src='Imagess/Contemporary sofa/WhatsApp Image 2025-01-26 at 12.07.47 AM.jpeg' alt="Modern Sofa"
+                        class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Contemporary Sofa</h3>
+                        <p class="text-gray-500 mt-2">70,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc9 (1).pdf" download>Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!-- Another Contemporary sofa -->
+                <div data-category="Contemporary"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src='Imagess/Products/4.jpg' alt="Modern Sofa" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Contemporary Sofa</h3>
+                        <p class="text-gray-500 mt-2">60,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc29.pdf" download>Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!-- Armchair  -->
+                <div data-category="Armchair"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src='Imagess/Products/11.jpg' alt="Modern Sofa" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Armchair </h3>
+                        <p class="text-gray-500 mt-2">60,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc35.pdf" download>Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!--Another  Armchair  -->
+                <div data-category="Armchair"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src='Imagess/Products/13.jpg' alt="Modern Sofa" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Armchair </h3>
+                        <p class="text-gray-500 mt-2">40,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc37 (1).pdf" download>Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!--Another  Armchair  -->
+                <div data-category="Armchair"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src='Imagess/Products/3.jpg' alt="Modern Sofa" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Armchair </h3>
+                        <p class="text-gray-500 mt-2">60,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc28.pdf" download>Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!--Another  Armchair  -->
+                <div data-category="Armchair"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src='Imagess/Products/WhatsApp Image 2025-01-29 at 6.38.21 PM.jpeg' alt="Modern Sofa"
+                        class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Armchair </h3>
+                        <p class="text-gray-500 mt-2">80,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc5 (1).pdf" download>Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!--Another  Armchair  -->
+                <div data-category="Armchair"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src='Imagess/armchair sofa/WhatsApp Image 2025-01-10 at 9.58.27 PM (9).jpeg' alt="Modern Sofa"
+                        class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Armchair </h3>
+                        <p class="text-gray-500 mt-2">70,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc1 (2).pdf" download>Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!-- Lawson sofa -->
+                <div data-category="Lawson sofa"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src='Imagess/Products/21.jpeg' alt="Modern Sofa" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Lawson Sofa </h3>
+                        <p class="text-gray-500 mt-2">140,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc2 (2).pdf" download>Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!-- Another Lawson sofa -->
+                <div data-category="Lawson sofa"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src='Imagess/Products/5.jpg' alt="Modern Sofa" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Lawson Sofa </h3>
+                        <p class="text-gray-500 mt-2">130,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc30 (1).pdf" download>Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!--Another Lawson sofa -->
+                <div data-category="Lawson sofa"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src='Imagess/Products/8.jpg' alt="Modern Sofa" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Lawson Sofa </h3>
+                        <p class="text-gray-500 mt-2">100,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc33 (1).pdf" download>Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!--Another Lawson sofa -->
+                <div data-category="Lawson sofa"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src='Imagess/Products/WhatsApp Image 2025-01-26 at 12.02.12 AM (1).jpeg' alt="Modern Sofa"
+                        class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Lawson Sofa </h3>
+                        <p class="text-gray-500 mt-2">120,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc4 (1).pdf" download>Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!--Another Lawson sofa -->
+                <div data-category="Lawson sofa"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src='Imagess/Products/21.jpeg' alt="Modern Sofa" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Lawson Sofa </h3>
+                        <p class="text-gray-500 mt-2">140,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc2 (2).pdf" download>Download Details</a>
+                        </button>
+                    </div>
+                </div>
+                <!-- Lawson sofa  -->
+                <div data-category="Lawson sofa"
+                    class="bg-gray-300 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src='Imagess/Products/15.jpg' alt="Modern Sofa" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Lawson Sofa </h3>
+                        <p class="text-gray-500 mt-2">200,000(PKR)</p>
+                        <button class="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 w-full">
+                            <a href="/Imagess/Documents/Doc39 (1).pdf" download>Download Details</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <footer>
+        <div class="logoHead">
+            <h1>
+                <span>O</span>
+                Oxford Sofas
+                <span>.</span>
+            </h1>
+        </div>
+        <div class="footerFlex">
+            <div>
+                <h3>About</h3>
+                <a href="about.html">Our Company</a>
+                <a href="about.html">Our Story</a>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <a href="#faq">Delivery Information</a>
+                <a href="">Privacy Policy</a>
+                <a href="">Terms & Conditions</a>
+                <a href="#home">Return</a>
+            </div>
+            <div>
+                <h3>Support</h3>
+                <a href="contact.html">Contact Us</a>
+                <a href="index.html">Help</a>
+                <a href="#faq">FAQ</a>
+                <a href="">CheckOut</a>
+            </div>
+        </div>
+        <div class="copyrightSec">
+            <p>Copyright&copy;2025 E-project Oxford Sofas. All Rights Reserved.</p>
+            <div class="socialMedia">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="https://github.com/Zehra796"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/iqra-mansha-im/"><i class='bx bxl-linkedin'></i></a>
+            </div>
+        </div>
+    </footer>
+
+  <script src="category.js"></script>
+</body>
+
+</html>

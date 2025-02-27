@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oxford Sofas - Contact Us</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assest/css/contact.css">
+    <link rel="website icon" type="png" href="Imagess/1.png">
+
+</head>
+
+<body>
+
+    <style>
+        /* scrolltop */
+
+        .scrollTop {
+            position: fixed;
+            bottom: 800px;
+            right: 40px;
+            width: 50px;
+            height: 50px;
+            background: url(./Imagess/arrow-up-solid.svg);
+            border-radius: 50%;
+            background-color: rgb(116, 173, 114);
+            background-size: 30px;
+            background-position: center;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            z-index: 300;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+        .scrollTop.active {
+            bottom: 40px;
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+    <script>
+
+        window.addEventListener('scroll', function () {
+            var scroll = this.document.querySelector('.scrollTop');
+            scroll.classList.toggle("active", window.scrollY > 500)
+        })
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            })
+        }
+
+    </script>
+    <div class="scrollTop" onclick="scrollToTop();"></div>
+
+    <div id="main_content">
+
+        <header class="header">
+            <a href="index.html" class="logo">
+                <span>O</span>
+                Oxford Sofas
+                <span>.</span>
+            </a>
+            <div class="hide">
+                <i class="bx bx-menu" id="menu-icon"></i>
+                <details>
+                    <summary>
+                        <i class="iv fa-solid fa-ellipsis-vertical"></i>
+                    </summary>
+                    <ul>
+                        <div class="search-box">
+                            <button class="btn-search" id="searchButton">
+                                <i class="fas fa-search" style="color: rgb(116, 173, 114); font-size: 13px;"></i>
+                            </button>
+                            <input type="text" class="input-search" placeholder="Type to Search..." id="searchInput">
+                        </div>
+
+                        <!-- Include SweetAlert2 library -->
+                        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+                        <script>
+                            // Prevent form submission on Enter key
+                            document.getElementById('searchInput').addEventListener('keydown', function (event) {
+                                if (event.key === 'Enter') {
+                                    event.preventDefault(); // Prevent default form submission
+                                    showAlert(); // Trigger the alert
+                                }
+                            });
+
+                            // Handle search button click
+                            document.getElementById('searchButton').addEventListener('click', function (event) {
+                                event.preventDefault(); // Prevent default form submission
+                                showAlert(); // Trigger the alert
+                            });
+
+                            // Function to show the SweetAlert popup
+                            function showAlert() {
+                                Swal.fire({
+                                    title: "The Internet?",
+                                    text: "That thing is still around?",
+                                    icon: "question",
+                                    allowOutsideClick: false,
+                                    allowEscapeKey: false,
+                                    showConfirmButton: true,
+                                    confirmButtonText: "OK",
+                                    backdrop: true
+                                });
+                            }
+                        </script>
+
+
+
+                        <li>
+                            <i class='bx bx-heart'></i>
+                            <a href="wishlist.html" class="wish" style="text-decoration: none; ">
+                                Wishlist
+                            </a>
+                        </li>
+                        <style>
+                            .wish {
+                                color: white;
+                            }
+
+                            .wish:hover {
+                                color: black;
+                            }
+                        </style>
+                        <li>
+                            <i class='bx bxs-user'></i>
+                            <a href="login.html" class="wish" style="text-decoration: none; ">
+                                Profile
+                            </a>
+                        </li>
+                    </ul>
+                </details>
+            </div>
+            <nav class="navbar">
+                <a href="index.html" class="active">Home</a>
+                <a href="product.html">Products</a>
+                <a href="category.html">Categories</a>
+                <a href="about.html">About Us</a>
+                <a href="./index.html#faq">FAQ</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="icons">
+                <div class="search-box">
+                    <button class="btn-search" id="searchButton">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <input type="text" class="input-search" placeholder="Type to Search..." id="searchInput">
+                </div>
+
+                <script>
+                    // Function to display the SweetAlert popup
+                    function showAlert() {
+                        Swal.fire({
+                            title: "The Internet?",
+                            text: "That thing is still around?",
+                            icon: "question",
+                            allowOutsideClick: false, // Prevent closing by clicking outside
+                            allowEscapeKey: false,  // Prevent closing by pressing Escape
+                            showConfirmButton: true, // Show the OK button
+                            confirmButtonText: "OK"
+                        });
+                    }
+
+                    // Add event listener for the Enter key in the input field
+                    document.getElementById('searchInput').addEventListener('keydown', function (event) {
+                        if (event.key === 'Enter') {
+                            event.preventDefault(); // Prevent default form submission or behavior
+                            showAlert(); // Show SweetAlert popup
+                        }
+                    });
+
+                    // Add event listener for the search button click
+                    document.getElementById('searchButton').addEventListener('click', function () {
+                        showAlert(); // Show SweetAlert popup
+                    });
+                </script>
+
+                <a href="wishlist.html">
+                    <i class='bx bx-heart'></i>
+                </a>
+                <a href="login.html">
+                    <i class='bx bxs-user'></i>
+                </a>
+            </div>
+        </header>
+
+        <main>
+            <section class="contact" id="contact">
+                <div class="contactbg">
+                    <div>
+                        <h1>Contact Us</h1>
+                        <p>Feel free to reach out to us at any time. We are here to help.</p>
+                    </div>
+                </div>
+
+                <div class="contactFlex">
+                    <div class="contactInfo">
+                        <h2>Get In Touch</h2>
+                        <p>We are here for you every step of the way. Whether you have questions, need order assistance,
+                            or
+                            want to share feedback, our friendly customer support team is ready to assist. Our team is
+                            here
+                            to help! Reach out to us via</p>
+                        <div class="media">
+                            <div>
+                                <i class='bx bx-mail-send'></i>
+                                <a href="mailto:info@oxfordsofas.com">
+                                    Mail:
+                                    <span>
+                                        info@oxfordsofas.com
+                                    </span>
+                                </a>
+                            </div>
+                            <div>
+                                <i class='bx bx-phone'></i>
+                                <a href="tel:+-----------">
+                                    Phone:
+                                    <span>
+                                        +000 000 0000
+                                    </span>
+                                </a>
+                            </div>
+                            <div>
+                                <i class='bx bxs-map'></i>
+                                <a href="#" onclick="showMap()">
+                                    Office Location:
+                                    <span>
+                                        Aptech Learning NN
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div id="map-container" style="display: none;">
+                            <div id="google-map" style="width: 100%; height: 400px;"></div>
+                        </div>
+                        <div class="social">
+                            <h3>Stay Connected</h3>
+                            <div>
+                                <a href="">
+                                    <i class='bx bxl-facebook'></i>
+                                </a>
+                                <a href="https://github.com/IqraaMansha">
+                                    <i class='bx bxl-github'></i>
+                                </a>
+                                <a href="">
+                                    <i class='bx bxl-instagram'></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/iqra-mansha-im/">
+                                    <i class='bx bxl-linkedin'></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contactForm">
+                        <h2>Drop Us A Line</h2>
+                        <p>Your email address will not be published!</p>
+                        <form id="contactForm">
+                            <div class="inputBox">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" placeholder="Enter your Name.." required>
+                            </div>
+                            <div class="inputBox">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" placeholder="Enter your Email Address.." required>
+                            </div>
+                            <div class="inputBox">
+                                <label for="phone">Phone No:</label>
+                                <input type="text" id="phone" placeholder="Enter your phone number.." required>
+                            </div>
+                            <div class="inputBox">
+                                <label for="message"></label>
+                                <textarea name="message" id="message" placeholder="Write your message..." required></textarea>
+                            </div>
+                    
+                            <button type="submit">SEND</button>
+                        </form>
+                    
+                        <script>
+                            document.getElementById("contactForm").addEventListener("submit", function(event) {
+                                event.preventDefault();  // Prevent form submission
+                                
+                                // Check if all fields are filled
+                                const name = document.getElementById("name").value;
+                                const email = document.getElementById("email").value;
+                                const phone = document.getElementById("phone").value;
+                                const message = document.getElementById("message").value;
+                    
+                                // If all fields are filled, show the alert and refresh the page
+                                if (name && email && phone && message) {
+                                    alert("Your message has been sent!");
+                                    window.location.reload();  // Refresh the page
+                                } else {
+                                    alert("Please fill in all fields before submitting.");
+                                }
+                            });
+                        </script>
+                    </div>
+                </div>
+            </section>
+    </div>
+
+    <section class="newsLetterSection">
+        <div class="newsFlex">
+            <div class="newsContent">
+                <h1>Subscribe To Our <br> NewsLetter</h1>
+                <p>Subscribe to our email newsletter today to receive updates on the latest news</p>
+                <form id="newsletterForm">
+                    <div>
+                        <i class='bx bx-envelope'></i>
+                        <input type="email" id="emailInput" autocomplete="off" required name="email"
+                            placeholder="Enter Your Email">
+                        <button type="submit">Subscribe</button>
+                    </div>
+                    <button class="on" type="submit"
+                        style="width: 100%; margin-top: 20px; display: none">Subscribe</button>
+                </form>
+            </div>
+            <div class="newsImg">
+                <img src="/Imagess/Diwansofas/18.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById("newsletterForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevents default form submission
+            let email = document.getElementById("emailInput").value;
+            if (email) {
+                alert("Email submitted successfully: ");
+                document.getElementById("newsletterForm").reset(); // Clears the input field
+            }
+        });
+    </script>
+    </main>
+
+    <footer>
+        <div class="logoHead">
+            <h1>
+                <span>O</span>
+                Oxford Sofas
+                <span>.</span>
+            </h1>
+        </div>
+        <div class="footerFlex">
+            <div>
+                <h3>About</h3>
+                <a href="about.html">Our Company</a>
+                <a href="about.html">Our Story</a>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <a href="#faq">Delivery Information</a>
+                <a href="">Privacy Policy</a>
+                <a href="">Terms & Conditions</a>
+                <a href="#home">Return</a>
+            </div>
+            <div>
+                <h3>Support</h3>
+                <a href="contact.html">Contact Us</a>
+                <a href="index.html">Help</a>
+                <a href="#faq">FAQ</a>
+                <a href="">CheckOut</a>
+            </div>
+        </div>
+        <div class="copyrightSec">
+            <p>Copyright&copy;2025 E-project Oxford Sofas. All Rights Reserved.</p>
+            <div class="socialMedia">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="https://github.com/Zehra796"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/iqra-mansha-im/"><i class='bx bxl-linkedin'></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showMap() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    function (position) {
+                        const userLat = position.coords.latitude;
+                        const userLon = position.coords.longitude;
+                        initMap(userLat, userLon);
+                    },
+                    function () {
+                        alert("Unable to retrieve your location.");
+                        initMap(); // Load map without user location
+                    }
+                );
+            } else {
+                alert("Geolocation is not supported by your browser.");
+                initMap(); // Load map without user location
+            }
+        }
+
+        function initMap(userLat = null, userLon = null) {
+            // Office location (replace with actual coordinates)
+            const officeLocation = { lat: 51.754816, lng:  -1.256999 };
+
+            // If user location is available, center the map there, otherwise use office location
+            const centerLocation = userLat && userLon ? { lat: userLat, lng: userLon } : officeLocation;
+
+            // Check if Google Maps API is loaded
+            if (typeof google === "undefined" || typeof google.maps === "undefined") {
+                alert("Google Maps API failed to load. Check your API key.");
+                return;
+            }
+
+            // Create map
+            const map = new google.maps.Map(document.getElementById("google-map"), {
+                zoom: 14,
+                center: centerLocation
+            });
+
+            // Mark office location
+            new google.maps.Marker({
+                position: officeLocation,
+                map: map,
+                title: "Oxford Sofa's Office"
+            });
+
+            // If user location is available, mark it
+            if (userLat && userLon) {
+                new google.maps.Marker({
+                    position: { lat: userLat, lng: userLon },
+                    map: map,
+                    title: "Your Location"
+                });
+
+                // Adjust map to fit both locations
+                const bounds = new google.maps.LatLngBounds();
+                bounds.extend(officeLocation);
+                bounds.extend({ lat: userLat, lng: userLon });
+                map.fitBounds(bounds);
+            }
+
+            // Show the map container
+            document.getElementById("map-container").style.display = "block";
+        }
+
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script src="assest/js/script.js"></script>
+</body>
+
+</html>

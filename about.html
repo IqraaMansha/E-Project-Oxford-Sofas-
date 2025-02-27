@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oxford Sofas - About Us</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assest/css/about.css">
+    <link rel="website icon" type="png" href="Imagess/1.png">
+
+</head>
+
+<body>
+    <style>
+        /* scrolltop */
+
+        .scrollTop {
+            position: fixed;
+            bottom: 800px;
+            right: 40px;
+            width: 50px;
+            height: 50px;
+            background: url(./Imagess/arrow-up-solid.svg);
+            border-radius: 50%;
+            background-color: rgb(116, 173, 114);
+            background-size: 30px;
+            background-position: center;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            z-index: 300;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+        .scrollTop.active {
+            bottom: 40px;
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+    <script>
+
+        window.addEventListener('scroll', function () {
+            var scroll = this.document.querySelector('.scrollTop');
+            scroll.classList.toggle("active", window.scrollY > 500)
+        })
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            })
+        }
+
+    </script>
+    <div class="scrollTop" onclick="scrollToTop();"></div>
+    
+    <div id="main_content">
+        <header class="header">
+            <a href="index.html" class="logo">
+                <span>O</span>
+                Oxford Sofas
+                <span>.</span>
+            </a>
+            <div class="hide">
+                <i class="bx bx-menu" id="menu-icon"></i>
+                <details>
+                    <summary>
+                        <i class="iv fa-solid fa-ellipsis-vertical"></i>
+                    </summary>
+                    <ul>
+                        <div class="search-box">
+                            <button class="btn-search" id="searchButton">
+                                <i class="fas fa-search" style="color: rgb(116, 173, 114); font-size: 13px;"></i>
+                            </button>
+                            <input type="text" class="input-search" placeholder="Type to Search..." id="searchInput">
+                        </div>
+
+                        <!-- Include SweetAlert2 library -->
+                        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+                        <script>
+                            // Prevent form submission on Enter key
+                            document.getElementById('searchInput').addEventListener('keydown', function (event) {
+                                if (event.key === 'Enter') {
+                                    event.preventDefault(); // Prevent default form submission
+                                    showAlert(); // Trigger the alert
+                                }
+                            });
+
+                            // Handle search button click
+                            document.getElementById('searchButton').addEventListener('click', function (event) {
+                                event.preventDefault(); // Prevent default form submission
+                                showAlert(); // Trigger the alert
+                            });
+
+                            // Function to show the SweetAlert popup
+                            function showAlert() {
+                                Swal.fire({
+                                    title: "The Internet?",
+                                    text: "That thing is still around?",
+                                    icon: "question",
+                                    allowOutsideClick: false,
+                                    allowEscapeKey: false,
+                                    showConfirmButton: true,
+                                    confirmButtonText: "OK",
+                                    backdrop: true
+                                });
+                            }
+                        </script>
+
+
+
+                        <li>
+                            <i class='bx bx-heart'></i>
+                            <a href="wishlist.html" class="wish" style="text-decoration: none; ">
+                                Wishlist
+                            </a>
+                        </li>
+                        <style>
+                            .wish {
+                                color: white;
+                            }
+
+                            .wish:hover {
+                                color: black;
+                            }
+                        </style>
+                        <li>
+                            <i class='bx bxs-user'></i>
+                            <a href="login.html" class="wish" style="text-decoration: none; ">
+                                Profile
+                            </a>
+                        </li>
+                    </ul>
+                </details>
+            </div>
+            <nav class="navbar">
+                <a href="index.html" class="active">Home</a>
+                <a href="product.html">Products</a>
+                <a href="#categories">Categories</a>
+                <a href="about.html">About Us</a>
+                <a href="./index.html#faq">FAQ</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="icons">
+                <div class="search-box">
+                    <button class="btn-search" id="searchButton">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <input type="text" class="input-search" placeholder="Type to Search..." id="searchInput">
+                </div>
+
+                <script>
+                    // Function to display the SweetAlert popup
+                    function showAlert() {
+                        Swal.fire({
+                            title: "The Internet?",
+                            text: "That thing is still around?",
+                            icon: "question",
+                            allowOutsideClick: false, // Prevent closing by clicking outside
+                            allowEscapeKey: false,  // Prevent closing by pressing Escape
+                            showConfirmButton: true, // Show the OK button
+                            confirmButtonText: "OK"
+                        });
+                    }
+
+                    // Add event listener for the Enter key in the input field
+                    document.getElementById('searchInput').addEventListener('keydown', function (event) {
+                        if (event.key === 'Enter') {
+                            event.preventDefault(); // Prevent default form submission or behavior
+                            showAlert(); // Show SweetAlert popup
+                        }
+                    });
+
+                    // Add event listener for the search button click
+                    document.getElementById('searchButton').addEventListener('click', function () {
+                        showAlert(); // Show SweetAlert popup
+                    });
+                </script>
+
+                <a href="wishlist.html">
+                    <i class='bx bx-heart'></i>
+                </a>
+                <a href="login.html">
+                    <i class='bx bxs-user'></i>
+                </a>
+            </div>
+        </header>
+
+        <main>
+            <section class="about">
+                <div class="aboutbg">
+                    <div>
+                        <h1>About Us</h1>
+                    </div>
+                </div>
+
+                <div class="aboutUs">
+                    <div class="aboutText">
+                        <h2>Discover Oxford Sofa's -
+                            <br>
+                            Where Innovation Meets Design
+                        </h2>
+                    </div>
+                    <div class="aboutImg">
+                        <img src="/Imagess/Products/K.jpeg" alt="About Us">
+                    </div>
+                </div>
+            </section>
+    </div>
+
+
+    <section class="storySection">
+        <div class="headSec">
+            <h2>Our Challenging Story</h2>
+            <p>
+                Every success story begins with challenges, and ours was no different.
+                From sourcing the finest materials to perfecting craftsmanship, we faced obstacles head-on.
+                Through dedication, innovation, and an unwavering commitment to quality, we turned those challenges into
+                opportunities, shaping a brand that stands for comfort and excellence.
+
+            </p>
+        </div>
+        <div class="sectFlex">
+            <div class="storyImg">
+                <img src="/Imagess/Products/11.jpg" alt="Story 1">
+            </div>
+            <div class="storyText">
+                <h3>The Beginning</h3>
+                <p>
+                    Our journey started with a simple vision—to create sofas that redefine comfort and style.
+                    With a small team and a big dream, we crafted our first collection, blending premium materials with
+                    timeless designs.
+                    From a humble workshop to a trusted name in furniture, our passion for quality has fueled our
+                    growth.
+                </p>
+            </div>
+        </div>
+
+        <div class="sectFlex">
+            <div class="storyText">
+                <h3>Innovation & Design</h3>
+                <p>
+                    We believe that a sofa is more than just a piece of furniture—it’s the heart of a home.
+                    Our design philosophy combines aesthetics with functionality, ensuring every piece offers maximum
+                    comfort, durability, and style.
+                    From modular designs to smart features, we constantly innovate to enhance your living experience.
+                </p>
+            </div>
+            <div class="storyImg">
+                <img src="/Imagess/Diwansofas/6.jpg" alt="Story 2">
+            </div>
+        </div>
+
+
+        <div class="sectFlex">
+            <div class="storyImg">
+                <img src="/Imagess/Diwansofas/13.png" alt="Story 3">
+            </div>
+            <div class="storyText">
+                <h3>Success Stories</h3>
+                <p>
+                    Over the years, our sofas have found their way into thousands of homes,
+                    bringing comfort and joy to families. From homeowners designing their dream spaces to
+                    businesses creating inviting lounges, our customers' stories inspire us to keep delivering
+                    excellence.
+
+                </p>
+            </div>
+        </div>
+
+
+        <div class="sectFlex">
+            <div class="storyText">
+                <h3>Careers</h3>
+                <p>
+                    join a team that values creativity, craftsmanship, and innovation.
+                    Whether you're a designer, craftsman, or marketing expert, we offer a dynamic work environment where
+                    your skills and passion can thrive.
+                    Be a part of a company that’s shaping the future of furniture.
+                </p>
+            </div>
+            <div class="storyImg">
+                <img src="/Imagess/Diwansofas/19.jpg" alt="Story 4">
+            </div>
+        </div>
+        <div class="sectFlex">
+            <div class="storyImg">
+                <img src="/Imagess/Products/16.jpg" alt="Story 5">
+            </div>
+            <div class="storyText">
+                <h3>Looking Ahead</h3>
+                <p>
+                    The future of comfort is exciting, and we are committed to pushing the boundaries of design and
+                    technology.
+                    With sustainability at our core and innovation as our driving force,
+                    we look forward to creating sofas that redefine modern living. Stay with us on this journey!!
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="teamSection">
+        <div class="headSec">
+            <h2>Meet Our Team</h2>
+        </div>
+        <div class="teamFlex">
+            <div class="teamMember">
+                <img src="/Imagess/Products/bb.jpg" alt="Team Member 2">
+                <div class="data">
+                    <div>
+                        <h3>Team Member</h3>
+                        <p>SYEDA ZEHRA SHAH.</p>
+                    </div>
+                    <div>
+                        <a href="https://github.com/Zehra796">
+                            <i class='bx bxl-github'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="teamMember">
+                <img src="/Imagess/ee.jpg" alt="Team Member 2">
+                <div class="data">
+                    <div>
+                        <h3>Team Member</h3>
+                        <p>KHATEEB.</p>
+                    </div>
+                    <div>
+
+                        <a href="">
+                            <i class='bx bxl-linkedin'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teamMember">
+                <img src="/Imagess/ii.jpg" alt="Team Member 1">
+                <div class="data">
+                    <div>
+                        <h3>Team Leader</h3>
+                        <p>IQRA MANSHA.</p>
+                    </div>
+                    <div>
+
+                        <a href="https://www.linkedin.com/in/iqra-mansha-im/">
+                            <i class='bx bxl-linkedin'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teamMember">
+                <img src="/Imagess/dd.jpg" alt="Team Member 2">
+                <div class="data">
+                    <div>
+                        <h3>Team Member</h3>
+                        <p>ALIYAN.</p>
+                    </div>
+                    <div>
+
+                        <a href="">
+                            <i class='bx bxl-linkedin'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teamMember">
+                <img src="/Imagess/Products/cc.jpg" alt="Team Member 3">
+                <div class="data">
+                    <div>
+                        <h3> Team Member</h3>
+                        <p>QURATULAIN.</p>
+                    </div>
+                    <div>
+
+                        <a href="">
+                            <i class='bx bxl-linkedin'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsLetterSection">
+        <div class="newsFlex">
+            <div class="newsContent">
+                <h1>Subscribe To Our <br> NewsLetter</h1>
+                <p>Subscribe to our email newsletter today to receive updates on the latest news</p>
+                <form id="newsletterForm">
+                    <div>
+                        <i class='bx bx-envelope'></i>
+                        <input type="email" id="emailInput" autocomplete="off" required name="email" placeholder="Enter Your Email">
+                        <button type="submit">Subscribe</button>
+                    </div>
+                    <button class="on" type="submit" style="width: 100%; margin-top: 20px; display: none">Subscribe</button>
+                </form>
+            </div>
+            <div class="newsImg">
+                <img src="/Imagess/Diwansofas/18.png" alt="">
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        document.getElementById("newsletterForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevents default form submission
+            let email = document.getElementById("emailInput").value;
+            if (email) {
+                alert("Email submitted successfully: ");
+                document.getElementById("newsletterForm").reset(); // Clears the input field
+            }
+        });
+    </script>
+    </main>
+
+
+  
+    <footer>
+        <div class="logoHead">
+            <h1>
+                <span>O</span>
+                Oxford Sofas
+                <span>.</span>
+            </h1>
+        </div>
+        <div class="footerFlex">
+            <div>
+                <h3>About</h3>
+                <a href="about.html">Our Company</a>
+                <a href="about.html">Our Story</a>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <a href="#faq">Delivery Information</a>
+                <a href="">Privacy Policy</a>
+                <a href="">Terms & Conditions</a>
+                <a href="#home">Return</a>
+            </div>
+            <div>
+                <h3>Support</h3>
+                <a href="contact.html">Contact Us</a>
+                <a href="index.html">Help</a>
+                <a href="#faq">FAQ</a>
+                <a href="">CheckOut</a>
+            </div>
+        </div>
+        <div class="copyrightSec">
+            <p>Copyright&copy;2025 E-project Oxford Sofas. All Rights Reserved.</p>
+            <div class="socialMedia">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="https://github.com/IqraaMansha"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/iqra-mansha-im/"><i class='bx bxl-linkedin'></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+        $('.faqAnsTwo').hide();
+        $('.faqAnsThree').hide();
+        $('.faqAnsFour').hide();
+        $('.faqAnsFive').hide();
+
+        $('.ques .shopOne').on('click', function () {
+            $('.shopOne i').toggleClass('bx-x')
+            $('.shopOne i').toggleClass('bx-right-arrow-alt');
+            $('.faqAnsOne').toggle('')
+        });
+        $('.ques .shopTwo').on('click', function () {
+            $('.shopTwo i').toggleClass('bx-x')
+            $('.faqAnsTwo').toggle('')
+        });
+        $('.ques .shopThree').on('click', function () {
+            $('.shopThree i').toggleClass('bx-x')
+            $('.faqAnsThree').toggle('')
+        });
+        $('.ques .shopFour').on('click', function () {
+            $('.shopFour i').toggleClass('bx-x')
+            $('.faqAnsFour').toggle('')
+        });
+        $('.ques .shopFive').on('click', function () {
+            $('.shopFive i').toggleClass('bx-x')
+            $('.faqAnsFive').toggle('')
+        });
+    </script>
+    <script src="assest/js/script.js"></script>
+</body>
+
+</html>

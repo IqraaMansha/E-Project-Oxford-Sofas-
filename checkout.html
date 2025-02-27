@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Oxford Sofas</title>
+    <link rel="website icon" type="png" href="Imagess/1.png">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="checkout.css"> <!-- Link to your common stylesheet -->
+</head>
+
+<body>
+    <script>
+
+        window.addEventListener('scroll', function () {
+            var scroll = this.document.querySelector('.scrollTop');
+            scroll.classList.toggle("active", window.scrollY > 500)
+        })
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            })
+        }
+
+    </script>
+    <div class="scrollTop" onclick="scrollToTop();"></div>
+    <header class="header">
+        <a href="index.html" class="logo">
+            <span>O</span>
+            Oxford Sofas
+            <span>.</span>
+        </a>
+        <div class="hide">
+            <i class="bx bx-menu" id="menu-icon"></i>
+            <details>
+                <summary>
+                    <i class="iv fa-solid fa-ellipsis-vertical"></i>
+                </summary>
+                <ul>
+                    <div class="search-box">
+                        <button class="btn-search" id="searchButton">
+                            <i class="fas fa-search" style="color: rgb(116, 173, 114); font-size: 13px;"></i>
+                        </button>
+                        <input type="text" class="input-search" placeholder="Type to Search..." id="searchInput">
+                    </div>
+                    <li>
+                        <i class='bx bx-heart'></i>
+                        <a href="wishlist.html" class="wish" style="text-decoration: none; ">
+                            Wishlist
+                        </a>
+                    </li>
+                    <li>
+                        <i class='bx bxs-user'></i>
+                        <a href="login.html" class="wish" style="text-decoration: none; ">
+                            Profile
+                        </a>
+                    </li>
+                </ul>
+            </details>
+        </div>
+        <nav class="navbar">
+            <a href="index.html" class="active">Home</a>
+            <a href="product.html">Products</a>
+            <a href="category.html">Categories</a>
+            <a href="about.html">About Us</a>
+            <a href="./index.html#faq">FAQ</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="icons">
+            <div class="search-box">
+                <button class="btn-search" id="searchButton">
+                    <i class="fas fa-search"></i>
+                </button>
+                <input type="text" class="input-search" placeholder="Type to Search..." id="searchInput">
+            </div>
+            <a href="wishlist.html">
+                <i class='bx bx-heart'></i>
+            </a>
+            <a href="login.html">
+                <i class='bx bxs-user'></i>
+            </a>
+        </div>
+    </header>
+   
+    <div class="checkout-section">
+        <h2 style="font-size: 25px;">Shipping Information</h2>
+
+        <form id="checkoutForm">
+            <div class="checkout-item">
+                <label for="shippingName" style="font-size: 15px;">Full Name</label>
+                <input type="text" id="shippingName" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="checkout-item">
+                <label for="shippingAddress" style="font-size: 15px;">Shipping Address</label>
+                <input type="text" id="shippingAddress" placeholder="Enter your shipping address" required>
+            </div>
+
+            <div class="checkout-item">
+                <label for="shippingCity" style="font-size: 15px;">City</label>
+                <input type="text" id="shippingCity" placeholder="Enter your city" required>
+            </div>
+
+            <h3 style="font-size: 25px;">Billing Information</h3>
+
+            <div class="checkout-item">
+                <label for="billingName" style="font-size: 15px;">Billing Name</label>
+                <input type="text" id="billingName" placeholder="Enter billing name" required>
+            </div>
+
+            <div class="checkout-item">
+                <label for="billingAddress" style="font-size: 15px;">Billing Address</label>
+                <input type="text" id="billingAddress" placeholder="Enter billing address" required>
+            </div>
+
+            <div class="checkout-item">
+                <label for="paymentMethod" style="font-size:15px">Payment Method</label>
+                <select id="paymentMethod" required>
+                    <option value="credit">Credit Card</option>
+                    <option value="paypal">PayPal</option>
+                </select>
+            </div>
+
+            <div class="checkout-item">
+                <label for="cardDetails" style="font-size: 15px">Card Details (if Credit Card)</label>
+                <input type="text" id="cardDetails" placeholder="Enter card details" required>
+            </div>
+
+            <h3 style="font-size: 25px;">Order Summary</h3>
+            <ul id="orderSummary">
+                <!-- Order items will be dynamically populated here -->
+            </ul>
+            <p style="font-size:15px">Total: <span id="totalAmount" style="font-size: 15px">$0.00</span></p>
+
+            <button type="submit" id="confirmOrder" style="font-size: 20px; border-radius: 5px;">Confirm Order</button>
+            <a href="product.html" class="continue-shopping">Continue Shopping</a>
+        </form>
+    </div>
+
+    <footer>
+        <div class="logoHead">
+            <h1>
+                <span>O</span>
+                Oxford Sofas
+                <span>.</span>
+            </h1>
+        </div>
+        <div class="footerFlex">
+            <div>
+                <h3>About</h3>
+                <a href="about.html">Our Company</a>
+                <a href="about.html">Our Story</a>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <a href="#faq">Delivery Information</a>
+                <a href="">Privacy Policy</a>
+                <a href="">Terms & Conditions</a>
+                <a href="#home">Return</a>
+            </div>
+            <div>
+                <h3>Support</h3>
+                <a href="contact.html">Contact Us</a>
+                <a href="index.html">Help</a>
+                <a href="#faq">FAQ</a>
+                <a href="">CheckOut</a>
+            </div>
+        </div>
+        <div class="copyrightSec">
+            <p>Copyright&copy;2025 E-project Oxford Sofas. All Rights Reserved.</p>
+            <div class="socialMedia">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="https://github.com/Zehra796"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/iqra-mansha-im/"><i class='bx bxl-linkedin'></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="checkout.js"></script> <!-- Add your checkout JavaScript -->
+</body>
+
+</html>

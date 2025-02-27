@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oxford Sofas - Your Wishlist</title>
+    <link rel="website icon" type="png" href="Imagess/1.png">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* searchbar */
+
+        .search-box {
+            width: fit-content;
+            height: fit-content;
+            position: relative;
+        }
+
+        .input-search {
+            height: 50px;
+            width: 50px;
+            border-style: none;
+            padding: 10px;
+            font-size: 18px;
+            letter-spacing: 2px;
+            outline: none;
+            border-radius: 25px;
+            transition: all .5s ease-in-out;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding-right: 40px;
+            color: #fff;
+        }
+
+        .input-search::placeholder {
+            color: white;
+            font-size: 18px;
+            letter-spacing: 2px;
+            font-weight: 100;
+        }
+
+        .btn-search {
+            width: 50px;
+            height: 50px;
+            border-style: none;
+            font-size: 20px;
+            font-weight: bold;
+            outline: none;
+            cursor: pointer;
+            border-radius: 50%;
+            position: absolute;
+            right: 0px;
+            color: #ffffff;
+            background-color: transparent;
+            pointer-events: painted;
+        }
+
+        .btn-search:focus~.input-search {
+            width: 300px;
+            border-radius: 0px;
+            background-color: transparent;
+            border-bottom: 1px solid rgb(255, 255, 255);
+            transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+        }
+
+        .input-search:focus {
+            width: 300px;
+            border-radius: 0px;
+            background-color: transparent;
+            border-bottom: 1px solid rgb(255, 255, 255);
+            transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+        }
+
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: var(--main-color);
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: var(--text-color);
+            width: 50px;
+        }
+
+        :root {
+            --text-color: white;
+            /* --bg-color: #080808;
+    --second-bg-color: #13131313;
+    */
+            --main-color: rgb(116, 173, 114);
+        }
+
+        html {
+            font-size: 60%;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem 8% 1rem;
+            background: rgba(0, 0, 0, 0.3);
+            background: transparent;
+            backdrop-filter: blur(10px);
+            background: black;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 10000;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            color: var(--text-color);
+            font-weight: 800;
+            cursor: pointer;
+            transition: 0.3s ease;
+            text-decoration: none;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+            transition: 0.3s ease;
+        }
+
+        .logo span {
+            text-shadow: 0 0 25px var(--main-color);
+            color: rgb(116, 173, 114);
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        .navbar a {
+            font-size: 1.5rem;
+            color: var(--text-color);
+            margin-left: 4rem;
+            font-weight: 500;
+            transition: 0.3s ease;
+            border-bottom: 3px solid transparent;
+            text-decoration: none;
+        }
+
+        .navbar a:hover,
+        .navbar a.active {
+            border-bottom: 3px solid var(--main-color);
+        }
+
+        .hide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0 10px;
+        }
+
+        #menu-icon {
+            font-size: 3.6rem;
+            color: var(--text-color);
+            display: none;
+            cursor: pointer;
+        }
+
+        .iv {
+            font-size: 2.3rem;
+            cursor: pointer;
+            color: var(--text-color);
+            cursor: pointer;
+            display: none;
+        }
+
+        details summary {
+            list-style: none;
+            width: max-content;
+            padding: 5px 10px;
+            cursor: pointer;
+            z-index: 100;
+        }
+
+        details {
+            position: relative;
+            z-index: 100;
+            display: none;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        details ul {
+            position: absolute;
+            top: 45px;
+            right: 0;
+            background: #000;
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--main-color);
+            box-shadow: 0 10px 50px var(--text-color);
+            padding: 10px;
+            border-radius: 10px;
+            z-index: 100;
+        }
+
+        details ul li {
+            z-index: 100;
+            width: 150px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: grid;
+            grid-template-columns: 20px 1fr;
+            grid-template-rows: 48px;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            padding: 0 10px;
+            text-align: left;
+            transition: 0.3s ease;
+            font-size: 14px;
+            color: var(--text-color);
+        }
+
+        details ul li i {
+            color: var(--main-color);
+        }
+
+        details ul li:hover {
+            background-color: white;
+            color: #000;
+        }
+
+        .icons {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .icons a {
+            text-decoration: none;
+        }
+
+        .icons a i {
+            font-size: 2.5rem;
+            color: var(--text-color);
+            margin-left: 1.3rem;
+            transition: 0.3s ease;
+        }
+
+        .icons a i:hover {
+            transform: scale(1.1);
+            transition: 0.3s ease;
+            color: var(--main-color);
+        }
+
+
+
+        @media (max-width: 1285px) {
+            html {
+                font-size: 55%;
+            }
+        }
+
+        @media (max-width: 991px) {
+            header {
+                padding: 2rem 3%;
+            }
+
+            .section {
+                min-height: 100vh;
+                padding: 10rem 3% 2rem;
+            }
+        }
+
+
+
+        @media (max-width: 1200px) {
+            #menu-icon {
+                display: block;
+            }
+
+            .iv {
+                display: block;
+            }
+
+            details {
+                display: block;
+            }
+
+            .icons {
+                display: none;
+            }
+
+            .navbar {
+                position: absolute;
+                top: 100%;
+                right: 0;
+                width: 50%;
+                height: 100vh;
+                padding: 1rem 3%;
+                background: rgba(0, 0, 0, 0.8);
+                backdrop-filter: blur(20px);
+                border-bottom-left-radius: 2rem;
+                border-left: 2px solid var(--main-color);
+                display: none;
+            }
+
+            .navbar.active {
+                display: block;
+            }
+
+            .navbar a {
+                display: block;
+                font-size: 1.7rem;
+                margin: 3rem 0;
+                color: white;
+            }
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 90px;
+            font-size: 15px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .sofa-list,
+        .wishlist {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .sofa-item,
+        .wishlist-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            width: 200px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        .sofa-item img,
+        .wishlist-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .btn {
+            margin-top: 10px;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .add-btn {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        .remove-btn {
+            background-color: #f44336;
+            color: white;
+        }
+
+        /* footerrr */
+        footer {
+            background-color: var(--text-color);
+            padding: 8% 0;
+            padding-bottom: 0;
+        }
+
+        footer .logoHead {
+            border-bottom: 1px solid #ccc;
+            border-top: 1px solid #ccc;
+            padding: 20px;
+        }
+
+        footer .logoHead h1 {
+            font-size: 40px;
+            font-weight: 900;
+            text-align: center;
+        }
+
+        footer .logoHead h1 span {
+            font-weight: 800;
+            font-size: 50px;
+            color: var(--main-color);
+        }
+
+        footer .footerFlex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 3% 8%;
+        }
+
+        .footerFlex div h3 {
+            font-size: 1.7rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .footerFlex div a {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #777;
+            display: block;
+            margin-bottom: 10px;
+            text-decoration: none;
+            transition: .3s ease;
+        }
+
+        .footerFlex div a:hover {
+            color: var(--main-color);
+            transition: .3s ease;
+        }
+
+        .copyrightSec {
+            padding: 20px 0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px 0;
+            word-wrap: 100%;
+            padding: 1.5% 8%;
+            background: var(--main-color);
+        }
+
+        .copyrightSec p {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: var(--text-color);
+        }
+
+        .copyrightSec .socialMedia {
+            display: flex;
+            align-items: center;
+
+            gap: 10px;
+        }
+
+        .copyrightSec .socialMedia a {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: var(--text-color);
+            text-decoration: none;
+            background: var(--text-color);
+            padding: 5px 5px;
+            border-radius: 50%;
+            text-align: center;
+            color: var(--main-color);
+            transition: .3s ease;
+            display: grid;
+            place-items: center;
+            border: 1px solid transparent;
+        }
+
+        .copyrightSec .socialMedia a:hover {
+            color: var(--text-color);
+            transition: .3s ease;
+            border: 1px solid var(--text-color);
+            background: var(--main-color);
+        }
+
+        .socialMedia a i {
+            font-size: 2rem;
+        }
+
+        @media (max-width: 899px) {
+            .footerFlex {
+                flex-direction: column;
+                gap: 30px 0;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .footerFlex div {
+                width: 100%;
+            }
+
+            .copyrightSec {
+                padding: 20px 0;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 20px 0;
+                padding: 2% 8%;
+                width: 100%;
+            }
+
+            .copyrightSec .socialMedia {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        /* scrolltop */
+
+        .scrollTop {
+            position: fixed;
+            bottom: 800px;
+            right: 40px;
+            width: 50px;
+            height: 50px;
+            background: url(./Imagess/arrow-up-solid.svg);
+            border-radius: 50%;
+            background-color: rgb(116, 173, 114);
+            background-size: 30px;
+            background-position: center;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            z-index: 300;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+        .scrollTop.active {
+            bottom: 40px;
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        window.addEventListener('scroll', function () {
+            var scroll = this.document.querySelector('.scrollTop');
+            scroll.classList.toggle("active", window.scrollY > 500)
+        })
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            })
+        }
+
+    </script>
+    <div class="scrollTop" onclick="scrollToTop();"></div>
+    <header class="header">
+        <a href="index.html" class="logo">
+            <span>O</span>
+            Oxford Sofas
+            <span>.</span>
+        </a>
+        <div class="hide">
+            <i class="bx bx-menu" id="menu-icon"></i>
+            <details>
+                <summary>
+                    <i class="iv fa-solid fa-ellipsis-vertical"></i>
+                </summary>
+                <ul>
+                    <div class="search-box">
+                        <button class="btn-search" id="searchButton">
+                            <i class="fas fa-search" style="color: rgb(116, 173, 114); font-size: 13px;"></i>
+                        </button>
+                        <input type="text" class="input-search" placeholder="Type to Search..." id="searchInput">
+                    </div>
+                    <li>
+                        <i class='bx bx-heart'></i>
+                        <a href="wishlist.html" class="wish" style="text-decoration: none; ">
+                            Wishlist
+                        </a>
+                    </li>
+                    <li>
+                        <i class='bx bxs-user'></i>
+                        <a href="login.html" class="wish" style="text-decoration: none; ">
+                            Profile
+                        </a>
+                    </li>
+                </ul>
+            </details>
+        </div>
+        <nav class="navbar">
+            <a href="index.html" class="active">Home</a>
+            <a href="product.html">Products</a>
+            <a href="category.html">Categories</a>
+            <a href="about.html">About Us</a>
+            <a href="./index.html#faq">FAQ</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="icons">
+            <div class="search-box">
+                <button class="btn-search" id="searchButton">
+                    <i class="fas fa-search"></i>
+                </button>
+                <input type="text" class="input-search" placeholder="Type to Search..." id="searchInput">
+            </div>
+            <a href="wishlist.html">
+                <i class='bx bx-heart'></i>
+            </a>
+            <a href="login.html">
+                <i class='bx bxs-user'></i>
+            </a>
+        </div>
+        <script>let menuIcon = document.querySelector('#menu-icon');
+            let navbar = document.querySelector('.navbar');
+            menuIcon.onclick = (e) => {
+                e.preventDefault();
+                menuIcon.classList.toggle('bx-x');
+                navbar.classList.toggle('active');
+            }
+
+
+            let sections = document.querySelectorAll('section');
+            let navLinks = document.querySelectorAll('header nav a');
+            window.onscroll = () => {
+                sections.forEach(sec => {
+                    let top = window.scrollY;
+                    let offset = sec.offsetTop - 150;
+                    let height = sec.offsetHeight;
+                    let id = sec.getAttribute('id');
+
+
+                    if (top >= offset && top < offset + height) {
+                        navLinks.forEach(links => {
+                            links.classList.remove('active');
+                            document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+
+                        })
+                    }
+                })
+            }
+        </script>
+    </header>
+    <div class="container">
+        <h1>Your Wishlist</h1>
+        <h2>Available Sofas</h2>
+        <div class="sofa-list" id="sofaList">
+            <!-- Sofa items will be dynamically added here -->
+        </div>
+
+        <h2>Your Wishlist</h2>
+        <div class="wishlist" id="wishlist">
+            <!-- Wishlist items will appear here -->
+        </div>
+    </div>
+    <footer>
+        <div class="logoHead">
+            <h1>
+                <span>O</span>
+                Oxford Sofas
+                <span>.</span>
+            </h1>
+        </div>
+        <div class="footerFlex">
+            <div>
+                <h3>About</h3>
+                <a href="about.html">Our Company</a>
+                <a href="about.html">Our Story</a>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <a href="#faq">Delivery Information</a>
+                <a href="">Privacy Policy</a>
+                <a href="">Terms & Conditions</a>
+                <a href="#home">Return</a>
+            </div>
+            <div>
+                <h3>Support</h3>
+                <a href="contact.html">Contact Us</a>
+                <a href="index.html">Help</a>
+                <a href="#faq">FAQ</a>
+                <a href="">CheckOut</a>
+            </div>
+        </div>
+        <div class="copyrightSec">
+            <p>Copyright&copy;2025 E-project Oxford Sofas. All Rights Reserved.</p>
+            <div class="socialMedia">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="https://github.com/Zehra796"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/iqra-mansha-im/"><i class='bx bxl-linkedin'></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const sofas = [
+            { id: 1, name: "Grand Sofa", image: "./Imagess/Products/1.jpg" },
+            { id: 2, name: "Luxury Recliner", image: "./Imagess/Products/2.jpg" },
+            { id: 3, name: "Modern Sofa", image: "./Imagess/Products/7.jpg" },
+            { id: 4, name: "Classic Sofa", image: "./Imagess/Products/8.jpg" }
+        ];
+
+        const sofaList = document.getElementById('sofaList');
+        const wishlist = document.getElementById('wishlist');
+        let wishlistItems = [];
+
+        function renderSofas() {
+            sofas.forEach(sofa => {
+                const sofaItem = document.createElement('div');
+                sofaItem.classList.add('sofa-item');
+                sofaItem.innerHTML = `
+                    <img src="${sofa.image}" alt="${sofa.name}">
+                    <h3>${sofa.name}</h3>
+                    <button class="btn add-btn" onclick="addToWishlist(${sofa.id})">Add to Wishlist</button>
+                `;
+                sofaList.appendChild(sofaItem);
+            });
+        }
+
+        function addToWishlist(id) {
+            const sofa = sofas.find(s => s.id === id);
+            if (!wishlistItems.includes(sofa)) {
+                wishlistItems.push(sofa);
+                renderWishlist();
+            }
+        }
+
+        function removeFromWishlist(id) {
+            wishlistItems = wishlistItems.filter(s => s.id !== id);
+            renderWishlist();
+        }
+
+        function renderWishlist() {
+            wishlist.innerHTML = ''; // Clear the wishlist before rendering again
+            wishlistItems.forEach(sofa => {
+                const wishlistItem = document.createElement('div');
+                wishlistItem.classList.add('wishlist-item');
+                wishlistItem.innerHTML = `
+                    <img src="${sofa.image}" alt="${sofa.name}">
+                    <h3>${sofa.name}</h3>
+                    <button class="btn remove-btn" onclick="removeFromWishlist(${sofa.id})">Remove</button>
+                `;
+                wishlist.appendChild(wishlistItem);
+            });
+        }
+
+        // Initial rendering of sofas
+        renderSofas();
+    </script>
+
+</body>
+
+</html>

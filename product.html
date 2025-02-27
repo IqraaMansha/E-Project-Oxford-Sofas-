@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oxford Sofas - All Products</title>
+    <link rel="website icon" type="png" href="Imagess/1.png">
+    <link rel="stylesheet" href="product.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <script>
+
+        window.addEventListener('scroll', function () {
+            var scroll = this.document.querySelector('.scrollTop');
+            scroll.classList.toggle("active", window.scrollY > 500)
+        })
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            })
+        }
+
+    </script>
+    <div class="scrollTop" onclick="scrollToTop();"></div>
+
+    <header class="header">
+        <a href="index.html" class="logo">
+            <span>O</span>
+            Oxford Sofas
+            <span>.</span>
+        </a>
+        <div class="hide">
+            <i class="bx bx-menu" id="menu-icon"></i>
+            <details>
+                <summary>
+                    <i class="iv fa-solid fa-ellipsis-vertical"></i>
+                </summary>
+                <ul>
+                    <div class="search-box">
+                        <button class="btn-search" id="searchButton">
+                            <i class="fas fa-search" style="color: rgb(116, 173, 114); font-size: 13px;"></i>
+                        </button>
+                        <input type="text" class="input-search" placeholder="Type to Search..." id="searchInput">
+                    </div>
+                    <li>
+                        <i class='bx bx-heart'></i>
+                        <a href="wishlist.html" class="wish" style="text-decoration: none; ">
+                            Wishlist
+                        </a>
+                    </li>
+                    <li>
+                        <i class='bx bxs-user'></i>
+                        <a href="login.html" class="wish" style="text-decoration: none; ">
+                            Profile
+                        </a>
+                    </li>
+                </ul>
+            </details>
+        </div>
+        <nav class="navbar">
+            <a href="index.html" class="active">Home</a>
+            <a href="product.html">Products</a>
+            <a href="category.html">Categories</a>
+            <a href="about.html">About Us</a>
+            <a href="./index.html#faq">FAQ</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="icons">
+            <div class="search-box">
+                <button class="btn-search" id="searchButton">
+                    <i class="fas fa-search"></i>
+                </button>
+                <input type="text" class="input-search" placeholder="Type to Search..." id="searchInput">
+            </div>
+            <a href="wishlist.html">
+                <i class='bx bx-heart'></i>
+            </a>
+            <a href="login.html">
+                <i class='bx bxs-user'></i>
+            </a>
+        </div>
+    </header>
+    <section class="product">
+        <div class="productbg">
+            <div>
+                <h1>All Products</h1>
+                <p>You can find all types of sofas here.</p>
+            </div>
+        </div>
+    </section>
+    <div class="menu1">
+        <div class="menu-item1">
+            <img src="./Imagess/Products/1.jpg" alt="A cozy living room Sofa">
+            <h3 style="color: black;">A cozy living room sofa designed for ultimate comfort, featuring plush cushions
+                and soft upholstery.
+                Its timeless design and neutral tones effortlessly complement any décor.</h3>
+            <p class="rating">★★★★☆</p>
+            <p class="price">14000.00</p>
+            <div class="buttons">
+                <button class="add-to-cart" onclick="addToCart('A cozy living room Sofa')">Add to Cart</button>
+                <button class="buy-now" onclick="buyNow('A cozy living room Sofa')">Buy Now</button>
+            </div>
+        </div>
+        <div class="menu-item1">
+            <img src="./Imagess/Products/2.jpg" alt="Chesterfield sofa">
+            <h3 style="color: black;">Our Chesterfield sofa features iconic tufted detailing, rolled arms, and luxurious
+                leather
+                upholstery. A timeless centerpiece that exudes sophistication and style.</h3>
+            <p class="rating">★★★★★</p>
+            <p class="price">$5000.00</p>
+            <div class="buttons">
+                <button class="add-to-cart" onclick="addToCart('Chesterfield sofa')">Add to Cart</button>
+                <button class="buy-now" onclick="buyNow('Chesterfield sofa')">Buy Now</button>
+            </div>
+        </div>
+        <div class="menu-item1">
+            <img src="./Imagess/Products/3.jpg" alt="Armchair">
+            <h3 style="color: black;">Our armchair offers unmatched comfort with plush cushions, supportive armrests,
+                and a sleek,
+                timeless design. Perfect for adding charm to any corner of your home.</h3>
+            <p class="rating">★★★☆☆</p>
+            <p class="price">$12000.00</p>
+            <div class="buttons">
+                <button class="add-to-cart" onclick="addToCart('Armchair')">Add to Cart</button>
+                <button class="buy-now" onclick="buyNow('Armchair')">Buy Now</button>
+            </div>
+        </div>
+        <div class="menu-item1">
+            <img src="./Imagess/Products/4.jpg" alt="Lounge Sofa">
+            <h3 style="color: black;">Our lounge sofa combines modern style with ultimate relaxation, featuring spacious
+                seating, plush
+                cushions, and sleek, minimalist design. Perfect for unwinding in comfort.</h3>
+            <p class="rating">★★★★☆</p>
+            <p class="price">$11000.00</p>
+            <div class="buttons">
+                <button class="add-to-cart" onclick="addToCart('Lounge Sofa')">Add to Cart</button>
+                <button class="buy-now" onclick="buyNow('Lounge Sofa')">Buy Now</button>
+            </div>
+        </div>
+        <div class="menu-item1">
+            <img src="./Imagess/Products/5.jpg" alt="Square Arm Sofa">
+            <h3 style="color: black;">Our square arm sofa boasts a clean, modern silhouette with sleek, structured arms
+                and plush
+                cushions. A perfect blend of style and comfort for any living space.</h3>
+            <p class="rating ">★★★★★</p>
+            <p class="Rated 5.00 out of 5 based on 1 customer rating (3 customer reviews)"></p>
+            <p class="price">₨75,000 Original price was: ₨79,000</p>
+            <div class="buttons">
+                <button class="add-to-cart" onclick="addToCart('Square Arm Sofa')">Add to Cart</button>
+                <button class="buy-now" onclick="buyNow('Square Arm Sofa')">Buy Now</button>
+            </div>
+        </div>
+        <div class="menu-item1">
+            <img src="./Imagess/Products/6.jpg" alt="Contemporary Sofa">
+            <h3 style="color: black;">Our contemporary sofa redefines modern living with its unique design, smooth
+                curves, and tailored
+                upholstery. A statement piece that blends style with everyday comfort</h3>
+            <p class="rating">★★★★☆</p>
+            <p class="price">$11000.00</p>
+            <div class="buttons">
+                <button class="add-to-cart" onclick="addToCart('Contemporary Sofa')">Add to Cart</button>
+                <button class="buy-now" onclick="buyNow('Contemporary Sofa')">Buy Now</button>
+            </div>
+        </div>
+        <div class="menu-item1">
+            <img src="./Imagess/Products/7.jpg" alt="Futon Sofa">
+            <h3 style="color: black;">Our futon sofa offers versatile functionality, effortlessly transforming from a
+                sleek sofa to a
+                comfortable bed. Perfect for compact spaces and modern living.</h3>
+            <p class="rating">★★★★☆</p>
+            <p class="price">$10000.00</p>
+            <div class="buttons">
+                <button class="add-to-cart" onclick="addToCart('Futon Sofa')">Add to Cart</button>
+                <button class="buy-now" onclick="buyNow('Futon Sofa')">Buy Now</button>
+            </div>
+        </div>
+        <div class="menu-item1">
+            <img src="./Imagess/Products/8.jpg" alt="Modular Sofa">
+            <h3 style="color: black;">Our modular sofa allows for customizable configurations, offering both flexibility
+                and comfort. With
+                spacious seating and modern design, it adapts to any room layout.</h3>
+            <p class="rating">★★★★☆</p>
+            <p class="price">$13000.00</p>
+            <div class="buttons">
+                <button class="add-to-cart" onclick="addToCart('Modular Sofa')">Add to Cart</button>
+                <button class="buy-now" onclick="buyNow('Modular Sofa')">Buy Now</button>
+            </div>
+        </div>
+        <div class="menu-item1">
+            <img src="./Imagess/Products/9.jpg" alt="Sectional Sofa ">
+            <h3 style="color: black;">Our sectional sofa offers spacious, customizable seating, perfect for any layout.
+                With modern design
+                and versatile arrangement, it's ideal for both relaxation and entertaining.</h3>
+            <p class="rating">★★★★☆</p>
+            <p class="price">$19000.00</p>
+            <div class="buttons">
+                <button class="add-to-cart" onclick="addToCart('Sectional Sofa')">Add to Cart</button>
+                <button class="buy-now" onclick="buyNow('Sectional Sofa')">Buy Now</button>
+            </div>
+        </div>
+        <div class="menu-item1">
+            <img src="./Imagess/Products/10.jpg" alt="Tuxedo Sofa">
+            <h3 style="color: black;">Tuxedo sofa featuring a refined, square-arm design with high backrests and deep
+                cushions. A
+                sophisticated piece that adds elegance and comfort to any room.</h3>
+            <p class="rating">★★★★☆</p>
+            <p class="price">$16000.00</p>
+            <div class="buttons">
+                <button class="add-to-cart" onclick="addToCart('Tuxedo Sofa')">Add to Cart</button>
+                <button class="buy-now" onclick="buyNow('Tuxedo Sofa')">Buy Now</button>
+            </div>
+        </div>
+        <div class="menu-item1">
+            <img src="./Imagess/Products/11.jpg" alt="Cabriole Sofa">
+            <h3 style="color: black;">Cabriole sofa with gracefully curved arms and elegant wooden legs, offering a
+                classic look. Its
+                timeless design blends sophistication with comfort for any traditional or modern space</h3>
+            <p class="rating">★★★★☆</p>
+            <p class="price">$22000.00</p>
+            <div class="buttons">
+                <button class="add-to-cart" onclick="addToCart('Cabriole Sofa')">Add to Cart</button>
+                <button class="buy-now" onclick="buyNow('Cabriole Sofa')">Buy Now</button>
+            </div>
+        </div>
+        <div class="menu-item1">
+            <img src="./Imagess/Products/12.jpg" alt="Ottoman">
+            <h3 style="color: black;">An ottoman with a plush, cushioned top and sleek design, perfect for adding extra
+                seating or serving
+                as a stylish coffee table. Its versatility and comfort make it a great addition to any room.</h3>
+            <p class="rating">★★★★☆</p>
+            <p class="price">$29000.00</p>
+            <div class="buttons">
+                <button class="add-to-cart" onclick="addToCart('Ottoman')">Add to Cart</button>
+                <button class="buy-now" onclick="buyNow('Ottoman')">Buy Now</button>
+            </div>
+        </div>
+        <div class="menu-item1">
+            <img src="./Imagess/Products/13.jpg" alt="Corner Sofa">
+            <h3 style="color: black;">Corner sofa designed to maximize space, offering ample seating and a cozy,
+                inviting layout. Its
+                sleek style and comfort make it a perfect fit for any living area.</h3>
+            <p class="rating">★★★★☆</p>
+            <p class="price">$15000.00</p>
+            <div class="buttons">
+                <button class="add-to-cart" onclick="addToCart('Corner Sofa')">Add to Cart</button>
+                <button class="buy-now" onclick="buyNow('Corner Sofa')">Buy Now</button>
+            </div>
+        </div>
+        <div class="menu-item1">
+            <img src="./Imagess/Products/14.jpg" alt="Lawson Sofa">
+            <h3 style="color: black;">Lawson sofa featuring loose, overstuffed cushions and a relaxed design. Known for
+                its comfort and
+                casual elegance, it adds a welcoming touch to any living room.</h3>
+            <p class="rating">★★★★☆</p>
+            <p class="price">$12000.00</p>
+            <div class="buttons">
+                <button class="add-to-cart" onclick="addToCart('Lawson Sofa')">Add to Cart</button>
+                <button class="buy-now" onclick="buyNow('Lawson Sofa')">Buy Now</button>
+            </div>
+        </div>
+        <div class="menu-item1">
+            <img src="./Imagess/Products/15.jpg" alt="Divan ">
+            <h3 style="color: black;">Divan sofa with a low profile and sleek, minimalist design, offering both comfort
+                and style. Its
+                versatile structure makes it ideal for lounging or as a stylish addition to any space.</h3>
+            <p class="rating">★★★★☆</p>
+            <p class="price">$58000.00</p>
+            <div class="buttons">
+                <button class="add-to-cart" onclick="addToCart('Divan')">Add to Cart</button>
+                <button class="buy-now" onclick="buyNow('Divan')">Buy Now</button>
+            </div>
+        </div>
+        <div class="menu-item1">
+            <img src="./Imagess/Products/16.jpg" alt="CamelBack Sofa">
+            <h3 style="color: black;">Camelback sofa with its signature arched back and elegant, tufted upholstery. A
+                timeless piece that
+                adds a touch of sophistication and classic charm to any room.</h3>
+            <p class="rating">★★★★☆</p>
+            <p class="price">$24400.00</p>
+            <div class="buttons">
+                <button class="add-to-cart" onclick="addToCart('CamelBack Sofa')">Add to Cart</button>
+                <button class="buy-now" onclick="buyNow('CamelBack Sofa')">Buy Now</button>
+            </div>
+        </div>
+        <div class="menu-item1">
+            <img src="./Imagess/Products/17.jpg" alt="Mid-Century Couch">
+            <h3 style="color: black;">Mid-century couch featuring clean lines, wooden legs, and minimalist design. Its
+                retro-inspired
+                style blends seamlessly with modern interiors, offering both comfort and timeless appeal.</h3>
+            <p class="rating">★★★★☆</p>
+            <p class="price">$28000.00</p>
+            <div class="buttons">
+                <button class="add-to-cart" onclick="addToCart('Mid-Century Couch')">Add to Cart</button>
+                <button class="buy-now" onclick="buyNow('Mid-Century Couch')">Buy Now</button>
+            </div>
+        </div>
+        <div class="menu-item1">
+            <img src="./Imagess/Products/18.jpg" alt="Settee">
+            <h3 style="color: black;">Settee with a charming, compact design, perfect for smaller spaces. Its elegant
+                style and cushioned
+                seating provide both comfort and a sophisticated touch to any room.</h3>
+            <p class="rating">★★★★☆</p>
+            <p class="price">$16000.00</p>
+            <div class="buttons">
+                <button class="add-to-cart" onclick="addToCart('Settee')">Add to Cart</button>
+                <button class="buy-now" onclick="buyNow('Settee')">Buy Now</button>
+            </div>
+        </div>
+        <div class="menu-item1">
+            <img src="./Imagess/Products/19.jpg" alt="Leather Sofa">
+            <h3 style="color: black;">Leather sofa with rich, smooth upholstery and sturdy construction, offering both
+                luxury and
+                durability. Its timeless design enhances any living room, providing comfort and style for years to
+                come.</h3>
+            <p class="rating">★★★★☆</p>
+            <p class="price">$19000.00</p>
+            <div class="buttons">
+                <button class="add-to-cart" onclick="addToCart('Leather Sofa')">Add to Cart</button>
+                <button class="buy-now" onclick="buyNow('Leather Sofa')">Buy Now</button>
+            </div>
+        </div>
+        <div class="menu-item1">
+            <img src="./Imagess/Products/20.jpg" alt="Armless Sofa">
+            <h3 style="color: black;">Armless sofa with a sleek, minimalist design, providing an open and airy feel.
+                Perfect for modern
+                spaces, it offers comfortable seating while maintaining a clean, uncluttered look.</h3>
+            <p class="rating">★★★★☆</p>
+            <p class="price">$70000.00</p>
+            <div class="buttons">
+                <button class="add-to-cart" onclick="addToCart('Armless Sofa')">Add to Cart</button>
+                <button class="buy-now" onclick="buyNow('Armless Sofa')">Buy Now</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="cartPanel">
+        <h2>Your Cart</h2>
+        <ul id="cartItems">
+            <!-- Cart items will appear here -->
+        </ul>
+
+        <div class="buttons">
+            <button class="close-btn" onclick="closeCart()">Close</button>
+            <button onclick="window.location.href='checkout.html'" class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+    <footer>
+        <div class="logoHead">
+            <h1>
+                <span>O</span>
+                Oxford Sofas
+                <span>.</span>
+            </h1>
+        </div>
+        <div class="footerFlex">
+            <div>
+                <h3>About</h3>
+                <a href="about.html">Our Company</a>
+                <a href="about.html">Our Story</a>
+            </div>
+            <div>
+                <h3>Information</h3>
+                <a href="#faq">Delivery Information</a>
+                <a href="">Privacy Policy</a>
+                <a href="">Terms & Conditions</a>
+                <a href="#home">Return</a>
+            </div>
+            <div>
+                <h3>Support</h3>
+                <a href="contact.html">Contact Us</a>
+                <a href="index.html">Help</a>
+                <a href="#faq">FAQ</a>
+                <a href="">CheckOut</a>
+            </div>
+        </div>
+        <div class="copyrightSec">
+            <p>Copyright&copy;2025 E-project Oxford Sofas. All Rights Reserved.</p>
+            <div class="socialMedia">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="https://github.com/Zehra796"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/iqra-mansha-im/"><i class='bx bxl-linkedin'></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="product.js"></script>
+</body>
+
+</html>
