@@ -15,7 +15,7 @@ function displayOrderSummary() {
         orderSummary.appendChild(li);
         totalPrice += item.price;
     });
-    
+
     document.getElementById('totalAmount').textContent = `$${totalPrice.toFixed(2)}`;
 }
 

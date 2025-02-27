@@ -6,7 +6,6 @@ const emailField = document.querySelector(".email-field");
 const passField = document.querySelector(".create-password");
 const emailError = document.querySelector(".email-error");
 const passError = document.querySelector(".password-error");
-
 // Email Validation
 function checkEmail() {
     const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;

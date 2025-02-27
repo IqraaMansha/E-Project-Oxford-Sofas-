@@ -9,7 +9,6 @@ const form = document.querySelector("form"),
     passInput = passField.querySelector(".password"),
     cPassField = form.querySelector(".confirm-password"),
     cPassInput = cPassField.querySelector(".cPassword");
-
 // Name Validation
 function checkname() {
     const namePattern = /^(?=.*[a-z])/;
